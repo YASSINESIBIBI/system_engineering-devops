@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script lists the part after the first dash for all matching files in the current directory
+for file in *-*
+do
+  [ -f "$file" ] && echo "${file#*-}"
+done
