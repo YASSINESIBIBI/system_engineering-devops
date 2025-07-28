@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script lists all running processes and filters only lines containing the word 'bash'
+ps -eo user,pid,ppid,%cpu,%mem,vsz,rss,tty,stat,start,time,cmd --forest | grep bash
