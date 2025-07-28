@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Displays "To infinity and beyond" indefinitely and handles SIGTERM with a message
+
+trap 'echo "I am invincible!!!"' SIGTERM
+
+while true
+do
+  echo "To infinity and beyond"
+  sleep 2
+done
+#!/usr/bin/env bash
+# Stops the 7-highlander process using pkill
+
+pkill -f 7-highlander
