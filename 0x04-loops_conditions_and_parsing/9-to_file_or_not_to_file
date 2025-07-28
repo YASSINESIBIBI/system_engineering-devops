@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
-# This script lists the part after the first dash for all matching files in the current directory
-for file in *-*
-do
-  [ -f "$file" ] && echo "${file#*-}"
-done
+# This script checks the status of a file named "school"
+if [ -e school ]; then
+  if [ -f school ]; then
+    if [ ! -s school ]; then
+      echo "school exists but empty"
+    else
+      echo "school exist and is a regular file"
+    fi
+  elif [ -d school ]; then
+    echo "school exists but it’s a directory"
+  fi
+else
+  echo "school doesn’t exist"
+fi
